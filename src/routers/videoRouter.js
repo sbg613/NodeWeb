@@ -1,12 +1,13 @@
 import express from "express";
-import { watchVideoController, editVideoController, deleteVideoController, commentsController, deleteCommentsController } from "../controllers/videoController";
+import { watchVideoController, editVideoController, deleteVideoController, commentsController, deleteCommentsController, uploadVideoController } from "../controllers/videoController";
 
 const videoRouter = express.Router();
-
-videoRouter.get("/watch", watchVideoController);
-videoRouter.get("/edit", editVideoController);
-videoRouter.get("/delete", deleteVideoController);
-videoRouter.get("/comments", commentsController);
-videoRouter.get("/comments/delete", deleteCommentsController);
+//### /videos + /...
+videoRouter.get("/watch/:id(\\d+)", watchVideoController);
+videoRouter.get("/edit/:id(\\d+)", editVideoController);
+videoRouter.get("/upload/:id(\\d+)", uploadVideoController);
+videoRouter.get("/delete/:id(\\d+)", deleteVideoController);
+videoRouter.get("/comments/:id(\\d+)", commentsController);
+videoRouter.get("/comments/delete/:id(\\d+)", deleteCommentsController);
 
 export default videoRouter;

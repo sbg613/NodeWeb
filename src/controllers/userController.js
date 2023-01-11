@@ -1,10 +1,10 @@
 
 export const editUserController = (req, res) => {
 
-    res.send("Edit User");
+    return res.send("Edit User");
 };
 
 export const deleteUserController = (req, res) => {
 
-    res.send("Delete User");
+    return res.send("Delete User");
 };

@@ -1,25 +1,30 @@
 
 export const watchVideoController = (req, res) =>{
-
-    res.send("Watch Video");
+    console.log(req.params);
+    return res.send(`Watch Video ${req.params.id}`);
 };
 
 export const editVideoController = (req, res) => {
+    console.log(req.params);
+    return res.send("Edit Video");
+};
 
-    res.send("Edit Video");
+export const uploadVideoController = (req, res) =>{
+    console.log(req.params);
+    return res.send(`Upload Video ${req.params.id}`);
 };
 
 export const deleteVideoController = (req, res) => {
-
-    res.send("Delete Video");
+    console.log(req.params);
+    return res.send("Delete Video");
 };
 
 export const commentsController = (req, res) => {
-
-    res.send("Comments");
+    console.log(req.params);
+    return res.send("Comments");
 };
 
 export const deleteCommentsController = (req, res) => {
-
-    res.send("Comments Delete Video");
+    console.log(req.params);
+    return res.send("Comments Delete Video");
 };
